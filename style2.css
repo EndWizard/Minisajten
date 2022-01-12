@@ -4,16 +4,6 @@
     font-family: 'Lobster', cursive;
 }
 
-aside{
-  position: fixed;
-  top: 49px;
-  right: 0%;
-  animation-name: rainbow;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-  width: 11%;
-  height: 100vh;
-}
 
 .topnav {
   position: fixed;
@@ -45,18 +35,6 @@ aside{
   color: black;
 }
 
-.front{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 0px;
-  margin-top: 48px;
-  width: 89%;
-  background-image: url("Beach.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-height: 100vh;
-}
 
 @keyframes rainbow {
   0% {background-color: red;}
@@ -85,30 +63,42 @@ background-color: orange;
   right: 20px;
   height: 44px;
 }
-#search{
+.list{
+  animation-name: rainbow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 48px;
+  width: 100%;
+}
+.list h2{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 60px;
+}
+.list article {
+  margin: 1%;
+  border-radius: 5px;
   background-color: white;
-  border-radius: 10px;
+  width: 45%;
+  height: 50vh;
   border: black;
   border-style: double;
   border-width: thick;
   padding: 3px;
+  overflow: hidden;
 }
 
-.large{
-  font-size: 30px;
+article img{
+  width: 100%;
 }
-.large input{
-  font-size: 17px;
-  height: 44px;
-  width: 99%;
-}
-
-.small{
+article h3{
   display: flex;
-  font-size: 15px;
+  justify-content: center;
 }
 footer{
   display: flex;
@@ -124,11 +114,11 @@ footer p {
 }
 
 @media screen and (max-width: 991px) {
-  aside{
-    display: none;
-  }
-  .front{
+  .list{
     width: 100%;
+  }
+  .list article{
+    width: 90%;
   }
   footer{
     width: 100%;
